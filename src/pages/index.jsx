@@ -14,7 +14,7 @@ import Loader from '../components/Loader'
 
 //scene
 import Lights from '../components/Lights'
-import HTMLContent from '../components/HTMLContent'
+import Group from '../components/canvas/Group'
 
 //state
 import scrollState from '../components/state'
@@ -38,48 +38,47 @@ const Page = ({ title }) => {
   return (
     <>
       <ResponsiveHeader />
-      <Canvas
-        // concurrent
-        colorManagement
-        camera={{ position: [0, 0, 125], fov: 70 }}
+
+      <Lights r3f />
+
+      <Group
+        r3f
+        domContent={domContent}
+        bgColor="#f1d8f5 url('background.png') no-repeat"
+        modelPath='/website_avatar_vers_v1Draco.gltf'
+        position={250}
       >
-        <Lights />
-        <Suspense fallback={null}>
-          <HTMLContent
-            domContent={domContent}
-            bgColor="#f1d8f5 url('background.png') no-repeat"
-            modelPath='/website_avatar_vers_v1Draco.gltf'
-            position={250}
-          >
-            <HeroSection />
-          </HTMLContent>
-          <HTMLContent
-            domContent={domContent}
-            bgColor="#FECEE9 url('background4.png') no-repeat"
-            modelPath='/website_avatar_fruits_v7Draco.gltf'
-            position={0}
-          >
-            <ProcessSection />
-          </HTMLContent>
-          <HTMLContent
-            domContent={domContent}
-            bgColor="#f1d8f5 url('background5.png') no-repeat"
-            modelPath='/website_avatar_soph_v5Draco.gltf'
-            position={-250}
-          >
-            <LandingSection />
-          </HTMLContent>
-          <HTMLContent
-            domContent={domContent}
-            bgColor="#f2f3fc url('background4.png') no-repeat"
-            modelPath='/website_avatar_lanc_v15Draco.gltf'
-            position={-500}
-          >
-            <DevelopmentSection />
-          </HTMLContent>
-        </Suspense>
-      </Canvas>
-      <Loader />
+        <HeroSection />
+      </Group>
+      <Group
+        r3f
+        domContent={domContent}
+        bgColor="#FECEE9 url('background4.png') no-repeat"
+        modelPath='/website_avatar_fruits_v7Draco.gltf'
+        position={0}
+      >
+        <ProcessSection />
+      </Group>
+      <Group
+        r3f
+        domContent={domContent}
+        bgColor="#f1d8f5 url('background5.png') no-repeat"
+        modelPath='/website_avatar_soph_v5Draco.gltf'
+        position={-250}
+      >
+        <LandingSection />
+      </Group>
+      <Group
+        r3f
+        domContent={domContent}
+        bgColor="#f2f3fc url('background4.png') no-repeat"
+        modelPath='/website_avatar_lanc_v15Draco.gltf'
+        position={-500}
+      >
+        <DevelopmentSection />
+      </Group>
+
+      <Loader r3f />
       <div
         className='scrollArea'
         ref={scrollArea}

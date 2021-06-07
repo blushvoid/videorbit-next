@@ -24,7 +24,8 @@ function Footer() {
           </li>
         </ul>
         <ul className="footerList">
-          <li>Sitemap</li>
+          <li>sitemap</li>
+          <li>privacy</li>
         </ul>
       </div>
       <span className="copyright">Copyright © 2021 VideOrbit Studio</span>

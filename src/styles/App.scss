@@ -8,13 +8,21 @@ $color-shadow: rgba(31, 38, 135, 0.37);
 $color-font-primary: #253241;
 $glass-border: 1px solid rgba(255, 255, 255, 0.18);
 $glass-background: rgba(255, 255, 255, 0.05);
+$primary-pink: #F5CBDF;
+$primary-text-color: #253241;
+
+$pink-gradient: linear-gradient(45deg, #FEDFE0, #FDE3FD);
+$orange-gradient: linear-gradient(45deg, #FEE1C6, #FDCBC3);
+$blue-gradient: linear-gradient(45deg, #EAEAF8, #CFE1F4);
+$green-gradient: linear-gradient(45deg, #B5FEB2, #FCFDB9);
+
 
 
 body {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f5cbdf;
+  background: $primary-pink;
   transition: 0.4s ease-in-out;
   text-rendering: optimizeSpeed;
 }
@@ -68,7 +76,7 @@ h4 {
 
 Link {
   text-decoration: none;
-  color: #253241;
+  color: $primary-text-color;
 }
 
 // ---------------------------HEADER
@@ -180,7 +188,7 @@ Link {
 .nav a {
   text-transform: lowercase;
   text-decoration: none;
-  color: #253241;
+  color: $primary-text-color;
   font-weight: 500;
 }
 
@@ -273,10 +281,10 @@ button {
   a {
     Link {
       text-decoration: none;
-      color: #253241;
+      color: $primary-text-color;
     }
     text-decoration: none;
-    color: #253241;
+    color: $primary-text-color;
   }
 }
 
@@ -296,10 +304,9 @@ button {
   -webkit-text-fill-color: #ffffff70;
   text-shadow: 1px 1px 20px #6d4ed450;
   // -webkit-text-fill-color: #25324160; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0px;
-  -webkit-text-stroke-color: #253241;
+ 
   @media (max-width: 700px) {
-    -webkit-text-fill-color: #253241;
+    -webkit-text-fill-color: $primary-text-color;
   }
 }
 
@@ -513,7 +520,6 @@ button {
   left: 0px;
   width: 100%;
   height: 100%;
-  // background: #f5cbdf;
   background-image: url("/public/Background_2.png");
   display: flex;
   align-items: center;
@@ -524,7 +530,7 @@ button {
 .loading-bar-container {
   width: 100px;
   height: 8px;
-  background: #f5cbdf;
+  background: $primary-pink;
 }
 
 .loading-bar {
@@ -563,7 +569,7 @@ button {
     color: #25324190;
   }
   a:hover {
-    color: #253241;
+    color: $primary-text-color;
     transform: scale(1.1);
   }
   @media (max-width: 800px) {

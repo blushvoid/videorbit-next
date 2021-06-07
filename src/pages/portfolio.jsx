@@ -1,12 +1,15 @@
 import React from "react";
 
 import GalleryGrid from "../components/Grid/Grid";
-import Layout from "../containers/layout";
+import ResponsiveHeader from '../components/responsiveHeader'
+import Footer from '../components/footer'
 
 
 const Portfolio = () => (
   <>
+  <ResponsiveHeader />
     <GalleryGrid />
+    <Footer />
   </>
 );
 

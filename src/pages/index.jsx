@@ -12,7 +12,6 @@ import React, {
 //R3F
 import { Canvas } from '@react-three/fiber'
 
-
 //components
 import ResponsiveHeader from '../components/responsiveHeader'
 

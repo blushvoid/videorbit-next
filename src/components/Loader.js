@@ -1,5 +1,6 @@
 import React from 'react'
 import { a, useTransition } from '@react-spring/web'
+import { useProgress } from '@react-three/drei'
 
 function Loader() {
   const { active, progress } = useProgress()

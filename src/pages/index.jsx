@@ -11,11 +11,11 @@ import React, {
 
 //R3F
 import { Canvas } from '@react-three/fiber'
-import { useGLTFLoader } from '@react-three/drei'
+
 
 //components
 import ResponsiveHeader from '../components/responsiveHeader'
-import { Section } from '../components/section'
+
 import Footer from '../components/footer'
 import Loader from '../components/Loader'
 
@@ -32,11 +32,6 @@ import ProcessSection from '../sections/process'
 import LandingSection from '../sections/landing'
 import DevelopmentSection from '../sections/development'
 
-
-function Model({ url }) {
-  const gltf = useGLTFLoader(url, true)
-  return <primitive object={gltf.scene} dispose={null} />
-}
 
 
 const Page = ({ title }) => {

@@ -1,16 +1,25 @@
 
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
-import { Html } from '@react-three/drei'
+import { Html, useGLTFLoader } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
+
+
 import { Section } from './section'
+
+
+function Model({ url }) {
+  const gltf = useGLTFLoader(url, true)
+  return <primitive object={gltf.scene} dispose={null} />
+}
+
 
 const HTMLContent = ({
   domContent,
   children,
   bgColor,
   modelPath,
-  position,
+  position, 
 }) => {
   const ref = useRef()
   useFrame((state) => {

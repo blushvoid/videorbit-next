@@ -15,7 +15,7 @@ export default function HeroSection() {
         </span>
         <button className="btn-big">
           {/* <Route path="/portfolio" component={Portfolio}> */}
-          <Link href="/portfolio">check out our portfolio</Link>
+          check out our portfolio
           {/* </Route> */}
           </button>
       </div>

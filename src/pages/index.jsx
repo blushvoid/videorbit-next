@@ -1,7 +1,7 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
 
-import * as THREE from 'three'
+
 import React, {
   useRef,
   useEffect,

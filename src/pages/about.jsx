@@ -1,9 +1,6 @@
-import React from "react";
+import React from 'react'
+import Layout from '../containers/layout'
 
-import Layout from "../containers/layout"
-
-const AboutUs = () => (
-    <Layout />
-)
+const AboutUs = () => <Layout />
 
 export default AboutUs

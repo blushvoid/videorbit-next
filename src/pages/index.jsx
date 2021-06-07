@@ -1,13 +1,7 @@
 import useStore from '@/helpers/store'
 import dynamic from 'next/dynamic'
 
-
-import React, {
-  useRef,
-  useEffect,
-  useState,
-  Suspense,
-} from 'react'
+import React, { useRef, useEffect, useState, Suspense } from 'react'
 
 //R3F
 import { Canvas } from '@react-three/fiber'
@@ -30,8 +24,6 @@ import HeroSection from '../sections/hero'
 import ProcessSection from '../sections/process'
 import LandingSection from '../sections/landing'
 import DevelopmentSection from '../sections/development'
-
-
 
 const Page = ({ title }) => {
   useStore.setState({ title })

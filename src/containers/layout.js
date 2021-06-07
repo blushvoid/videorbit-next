@@ -1,14 +1,15 @@
-import React from "react";
+import React from 'react'
 
+import ResponsiveHeader from '../components/responsiveHeader'
+import Footer from '../components/footer'
 
-import ResponsiveHeader from "../components/responsiveHeader"
-import Footer from "../components/footer"
-
-const Layout = ({children, ...props}) => {
-    return (
-        <>
-            <ResponsiveHeader />
-            <Footer/>
-        </>
-    )
+const Layout = ({ children, ...props }) => {
+  return (
+    <>
+      <ResponsiveHeader />
+      <Footer />
+    </>
+  )
 }
+
+export default Layout

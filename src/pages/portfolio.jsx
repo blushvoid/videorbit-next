@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react'
 
-import GalleryGrid from "../components/Grid/Grid";
+import ResponsiveGalleryGrid from '../components/Grid/responsiveGalleryGrid'
 import ResponsiveHeader from '../components/responsiveHeader'
 import Footer from '../components/footer'
 
-
 const Portfolio = () => (
   <>
-  <ResponsiveHeader />
-    <GalleryGrid />
+    <ResponsiveHeader style={{ zIndex: 9999, color: '#FFF' }} />
+    <ResponsiveGalleryGrid />
     <Footer />
   </>
-);
+)
 
-export default Portfolio;
+export default Portfolio

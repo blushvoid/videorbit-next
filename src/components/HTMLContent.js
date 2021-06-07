@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { Html, useGLTF } from '@react-three/drei'
@@ -7,19 +6,17 @@ import * as THREE from 'three'
 
 import { Section } from './section'
 
-
 function Model({ url }) {
   const gltf = useGLTF(url, true)
   return <primitive object={gltf.scene} dispose={null} />
 }
-
 
 const HTMLContent = ({
   domContent,
   children,
   bgColor,
   modelPath,
-  position, 
+  position,
 }) => {
   const ref = useRef()
   useFrame((state) => {
